@@ -11,12 +11,12 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'sudo apt-get install npm' 
+                sh 'apt-get install npm' 
             }
         }
         stage('Test') {
             steps {
-                sh 'sudo ./jenkins/scripts/test.sh'
+                sh './jenkins/scripts/test.sh'
             }
         }
         stage('Deliver') {
